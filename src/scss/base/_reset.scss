@@ -1,0 +1,75 @@
+:root {
+  color-scheme: light dark;
+}
+
+html.dark-mode {
+  color-scheme: dark;
+}
+
+html:not(.dark-mode) {
+  color-scheme: light;
+}
+
+*, ::after, ::before {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+}
+
+button, input, optgroup, select, textarea {
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  // appearance: none;
+  background: none;
+  border: none;
+}
+
+[type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled), button:not(:disabled) {
+  cursor: pointer;
+}
+
+// 1. Allow labels to use `margin` for spacing.
+
+label {
+  display: inline-block; // 1
+}
+
+select {
+  appearance: none;
+  background-color: transparent;
+  border: none;
+  padding: 0 1em 0 1em;
+  margin: 0;
+  width: 100%;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: inherit;
+  line-height: inherit;
+  z-index: 1;
+}
+
+ul {
+  // list-style: none;
+  list-style: disc;
+  list-style-position: inside;
+}
+
+// Prevent double borders
+table {
+  caption-side: bottom;
+  border-collapse: collapse;
+}
+
+tbody, td, tfoot, th, thead, tr {
+  border-color: inherit;
+  border-style: solid;
+  border-width: 0;
+}

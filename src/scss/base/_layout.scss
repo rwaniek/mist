@@ -1,0 +1,54 @@
+.dark-mode {
+  .svg-placeholder {
+    filter: brightness(1.5);
+  }
+}
+
+body {
+  background-color: var(--app-background-color);
+  padding-top: var(--navbar-height);
+  
+  &.single, &.page {
+    .container {
+      background-color: var(--reversed-color);
+    }
+  }
+}
+
+.home {
+  .d-grid {
+    max-width: max(992px, 90vw);
+    grid-template-columns: repeat(auto-fill, minmax(min(400px, 100%), 1fr));
+    // gap: 1px;
+  }
+}
+
+.layout--sidebar {
+  display: flex;
+  flex-wrap: wrap;
+
+  main {
+    flex-basis: 0;
+    flex-grow: 999;
+    min-inline-size: 65%;
+  }
+
+  aside, .sidebar {
+    flex-basis: 20rem;
+    flex-grow: 1;
+    background: light-dark(hsl(40 60% 94% / 1), #262626);
+  }
+}
+
+footer {
+  nav {
+    color: #ccc;
+  }
+}
+
+li:has(h2, h3) {
+  padding-top: 2rem;
+}
+
+
+

@@ -1,0 +1,23 @@
+.light-switch {
+  --switch-size: 1.5rem;
+  box-sizing: content-box;
+  width: var(--switch-size);
+  height: var(--switch-size);
+  // border: 2px solid midnightblue;
+  border-radius: 10rem;
+  padding: 0;
+  overflow: hidden;
+  background-color: midnightblue;
+  
+  &.aurora {
+    background-color: #15a2e0;
+  }
+  
+
+  svg {
+    fill: #fff;
+    width: auto;
+    height: calc(2* var(--switch-size));
+    transition: transform 0.5s;
+  }
+}

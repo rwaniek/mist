@@ -1,0 +1,86 @@
+textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-clip: padding-box;
+  background-color: var(--bs-body-bg);
+  border: var(--bs-border-width) solid var(--bs-border-color);
+  border-radius: var(--bs-border-radius);
+  color: var(--bs-body-color);
+  display: block;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.2;
+  padding: .375rem .75rem;
+  -webkit-transition: border-color .15s ease-in-out, -webkit-box-shadow .15s ease-in-out;
+  transition: border-color .15s ease-in-out, -webkit-box-shadow .15s ease-in-out;
+  transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+  transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out, -webkit-box-shadow .15s ease-in-out;
+  width: 100%;
+}
+
+.form-control {
+  border-radius: 0;
+  background: none;
+
+  &:focus {
+    background: none;
+    color: #495057;
+    outline: 0;
+    border-color: var(--primary-color);
+    box-shadow: 0 .313rem .719rem rgb(from var(--primary-color) r g b / 0.1), 0 .156rem .5rem rgb(from var(--primary-color) r g b / 0.2);
+  }
+}
+
+.container-checkbox {
+  --checkbox-size: 1.5rem;
+  
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+
+  input {
+    
+    cursor: pointer;
+    opacity: 0;
+    height: var(--checkbox-size);
+    width: var(--checkbox-size);
+  
+    &:checked ~ .checkmark:after {
+      display: block;
+    }
+  }
+
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: var(--checkbox-size);
+    width: var(--checkbox-size);
+    // background-color: #f5f5f5;
+    border: 1px solid currentColor;
+    z-index: -1;
+
+    &:after {
+      content: "";
+      position: absolute;
+      display: none;
+      left: 8px;
+      top: 4px;
+      width: 7px;
+      height: 12px;
+      border: solid var(--secondary-color);
+      border-width: 0 2px 2px 0;
+      transform: rotate(45deg);
+    }
+  }
+}
+
+.input-wrapper {
+  background-color: white;
+  cursor: pointer;
+
+  svg {
+    right: 0.5em;
+  }
+}

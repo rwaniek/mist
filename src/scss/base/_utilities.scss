@@ -1,0 +1,65 @@
+.z-index-1 {
+  z-index: 1;
+}
+
+.z-index-2 {
+  z-index: 2;
+}
+
+.z-index-3 {
+  z-index: 3;
+}
+
+.blurred {
+  filter: blur(5px);
+  transition: filter .10s linear;
+}
+
+@media (min-width:992px) {
+  .w-lg-50 {
+    width: 50%;
+  }
+}
+
+.small {
+  font-size: 75% !important;
+}
+
+.smaller {
+  font-size: 90% !important;
+}
+
+.text-background {
+  color: white;
+  box-decoration-break: clone;
+  background-color: var(--accent-color);
+}
+
+.text-accent {
+  color: var(--accent-color) !important;
+}
+
+.text-clamp {
+  display: -webkit-box;
+  line-clamp: 3;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;  
+  overflow: hidden;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.text-black {
+  --bs-text-opacity: 1;
+  color: rgba(var(--bs-black-rgb), var(--bs-text-opacity)) !important;
+}
+
+.img-cover {
+  object-fit: cover;
+}
+
+.nested-list > li::marker {
+  content: counters(list-item,'.') ' ';
+}

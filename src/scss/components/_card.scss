@@ -1,0 +1,63 @@
+.card {
+  --bs-border-radius: 0;
+  background: var(--reversed-color);
+  transition: .3s ease-in-out;
+  border: none;
+  color: var(--app-text-color);
+  // outline: 1px solid var(--grid-border-color);
+  
+
+  header {
+    aspect-ratio: 3 / 2;
+    overflow: hidden;
+    border-inline: var(--grid-border-width) solid color-mix(in oklab, var(--grid-border-color) 40%, black);
+    margin-inline-start: calc(var(--grid-border-width)* -1);
+    margin-block-start: calc(var(--grid-border-width)* -1);
+    &:has(svg) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-color: var(--grid-border-color);
+      border-top: var(--grid-border-width) solid var(--grid-border-color);
+      // border-inline: var(--grid-border-width) solid var(--grid-border-color);
+    }
+  }
+
+  h3 {
+    font-size: clamp(1.5rem, 5vw, 2rem);
+    line-height: 1.2;
+  }
+
+  &-body {
+    border-inline: var(--grid-border-width) solid var(--grid-border-color);
+    margin-inline-start: calc(var(--grid-border-width)* -1);
+    border-bottom: var(--grid-border-width) solid var(--grid-border-color);
+    
+    @media (min-width: 576px) {
+      
+      p {
+        column-count: 2;
+        column-gap: 1rem;
+        column-rule: 1px solid var(--grid-border-color);
+      }
+    }
+  }
+
+  &-img-top {
+    // aspect-ratio: 3/2;
+    object-fit: cover;
+    height: 100%;
+    max-height: calc(40vh + 2vw);
+  }
+
+  &-footer {
+    background: none;
+  }
+
+  &--post {
+    .card-body {
+      background-color: hsla(0, 0%, 12%, 0.04);
+    }
+  }
+  
+}

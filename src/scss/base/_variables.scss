@@ -1,0 +1,24 @@
+:root {
+  --app-width: 1720px;
+  --app-background-color: light-dark(white, #202020);
+  --app-text-color: light-dark(#212529, #8a8a8a);
+  --app-headings-color: light-dark(#4b4b4b, #6e6e6e);
+  --navbar-height: 80px;
+
+  // --primary-color: #F1EEE3;
+  --primary-color: light-dark(#1c1c1c, #cecece);
+  --secondary-color: light-dark(#3E3E3E, #cbc8c8);
+  --reversed-color: light-dark(#FDFBF7, #171717);
+  --accent-color: #D95F69;
+
+  --grid-border-color: light-dark(#cecece, #404040);
+  --grid-border-width: 1px;
+
+  // Overriding bs variables
+  --bs-border-color: light-dark(#cecece, #404040);
+
+}
+
+.offcanvas {
+  --bs-offcanvas-bg: light-dark(#cecece, #404040);
+}

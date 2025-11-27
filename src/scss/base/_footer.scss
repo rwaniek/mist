@@ -1,0 +1,15 @@
+footer {
+  background-color: var(--accent-color);
+  color: rgb(217, 217, 217);
+  
+  a {
+    font-size: 0.8rem;
+    color: currentColor;
+  }
+  &.entry-#{&} {
+    background: none;
+    .edit-link {
+      color: red;
+    }
+  }
+}

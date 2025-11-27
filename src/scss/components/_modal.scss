@@ -1,0 +1,48 @@
+body:has(dialog[open]) {
+  overflow: hidden;
+}
+
+dialog {
+  max-width: 600px;
+  
+  position: fixed;
+  inset-inline-start: 0px;
+  inset-inline-end: 0px;
+  inset-block-start: 0px;
+  inset-block-end: 0px;
+  display: block;
+  transition: opacity .5s;
+  animation: scale-down .5s forwards;
+  animation-timing-function: cubic-bezier(.5,-.5,.1,1.5);
+  border: none;
+  // border-radius: 2rem;
+  box-shadow: 0 .46875rem 2.1875rem rgba(90, 97, 105, .1), 0 .9375rem 1.40625rem rgba(90, 97, 105, .1), 0 .25rem .53125rem rgba(90, 97, 105, .12), 0 .125rem .1875rem rgba(90, 97, 105, .1);
+
+  &::backdrop {
+    backdrop-filter: blur(0.25rem);
+    background-color: lch(7 9.91 143.9 / 0.7);
+  }
+
+  &[open] {
+    animation: slide-in-up .5s cubic-bezier(.25,0,.3,1) forwards;
+  }
+
+  &:not([open]) {
+    pointer-events: none;
+    opacity: 0;
+  }
+}
+
+.modal {
+  &-header {
+    background-color: #ff7400;
+    color: white;
+    position: relative;
+    h3 {
+      font-size: clamp(1.2rem, 3vw, 1.8rem);
+    }
+  }
+  &-body {
+    background-color: #fafafa;
+  }
+}

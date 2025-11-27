@@ -1,0 +1,32 @@
+/*!
+    Theme Name: Mist
+    Description: Super fast blogging platform
+    Version: 1.0.0
+    Author: R
+    Author URI: 
+*/
+
+// Base
+
+@use "base/variables";
+@use "base/reset";
+@use "base/typography";
+@use "base/layout";
+@use "base/footer";
+@use "base/utilities";
+// @use "base/animation";
+
+// Components
+
+@use "components/nav"; 
+@use "components/buttons";
+@use "components/carousel";
+@use "components/card";
+@use "components/forms";
+// @use "components/excerpt";
+// @use "components/hero";
+@use "components/modal";
+@use "components/single-post";
+@use "components/theme-toggle";
+@use "components/widgets";
+

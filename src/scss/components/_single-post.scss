@@ -1,0 +1,14 @@
+.single-post {
+
+  .entry-content {
+  
+    @media (min-width: 768px) {
+      column-count: 2;
+      column-gap: 5vw;
+      column-rule: 1px solid var(--grid-border-color);
+    }
+
+  }
+
+}
+

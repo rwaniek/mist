@@ -1,0 +1,51 @@
+body {
+  font-weight: 300;
+  line-height: 1.444;
+  color: var(--app-text-color);
+  text-align: left;
+  font-family: 'Pridi', serif;
+  font-size: clamp(.8rem, .5rem + .25vw, 1rem);
+}
+
+h1, h2, h3, h4, h5, nav {
+  // font-family: 'EB Garamond', serif;
+  font-family: 'Muli', sans-serif;
+  margin-top: 0;
+  color: var(--app-headings-color);
+  font-weight: 700;
+ // letter-spacing: 0.035rem;
+
+  a {
+    color: currentColor;
+    text-decoration: none;
+  }
+}
+
+h1 {
+  // color: black;
+  font-size: 22px;
+  font-size: clamp(1rem, .5rem + 4vw, 3rem);
+}
+
+h2, h3 {
+  font-size: 20px;
+  font-size: clamp(1rem, .5rem + 1vw, 1.3rem);
+}
+
+h4 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+h5 {
+  font-size: clamp(.5rem,.5rem + 0.5vw,0.8rem);
+  //color: #e6e6e6;
+}
+
+.entry-content {
+  font-size: clamp(0.8rem,0.8rem + 0.5vw,1rem);
+}
+
+.entry-content, header h1 {
+  padding-inline: max(2rem, 3vw);
+}
