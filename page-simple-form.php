@@ -11,10 +11,10 @@ get_header();
   <?php
     if ( have_posts() ) :
       while ( have_posts() ) : the_post(); ?>
-        <h1><?php the_title(); ?></h1>
+        <h1 class="pt-3"><?php the_title(); ?></h1>
         <?php the_content(); ?>
         <ajax-form>
-          <form class="mb-3" action="" method="post">
+          <form class="mb-5" action="" method="post">
             <?php wp_nonce_field('bf_form_contact'); ?>
             <input type="hidden" name="bf_action" value="contact">
             <div class="row g-3 mb-3">
