@@ -11,6 +11,13 @@
   // &--breadcrumbs {
   //   padding-top: calc(var(--navbar-height) + 1rem);
   // }
+  &-brand {
+    color: light-dark(#212529, #8c8c8c);
+
+    &:hover {
+      color: light-dark(#212529, #8c8c8c);
+    }
+  } 
 
   &-toggler {
     display: flex;
