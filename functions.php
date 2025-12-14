@@ -164,3 +164,20 @@ remove_action( 'wp_head', 'rest_output_link_wp_head');
 
 // Removing rest API links in head EditURI/RSD (Really Simple Discovery) link
 remove_action('wp_head', 'rsd_link');
+
+// Remove WordPress version meta tag
+remove_action('wp_head', 'wp_generator');
+
+function custom_asset_versioning($src) {
+    $url = parse_url($src);
+    $path = $_SERVER['DOCUMENT_ROOT'] . $url['path'];
+
+    if (file_exists($path)) {
+        $version = filemtime($path); // last modified timestamp
+        return remove_query_arg('ver', $src) . '?v=' . $version;
+    }
+
+    return $src;
+}
+add_filter('style_loader_src', 'custom_asset_versioning');
+add_filter('script_loader_src', 'custom_asset_versioning');
