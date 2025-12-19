@@ -46,7 +46,7 @@
         <svg viewBox="0 0 100 100">
           <use xlink:href="<?php echo get_template_directory_uri(); ?>/img/theme_toggle.svg#nightDay"></use>
         </svg>
-        <span class="visually-hidden"">Toggle Theme Color Mode</span>
+        <span class="visually-hidden"><?php _e( 'Toggle Theme Color Mode', 'mist' );?></span>
       </button>
     </div>
   </div>

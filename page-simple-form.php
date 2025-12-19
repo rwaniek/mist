@@ -21,19 +21,19 @@ get_header();
               <div class="col-md-6">
                 <div class="form-floating">
                   <input class="form-control" type="text" id="senderName" name="senderName" value="" placeholder="Name" required>
-                  <label for="senderName" class="form-label">Name:</label>
+                  <label for="senderName" class="form-label"><?php esc_html_e('Name', 'basic-form');?>:</label>
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="form-floating">
                   <input class="form-control" type="email" name="senderEmail" id="senderEmail" value="" placeholder="Email address" required>
-                  <label for="senderEmail" class="form-label">Email address:</label>
+                  <label for="senderEmail" class="form-label"><?php esc_html_e('Email address', 'basic-form');?>:</label>
                 </div>
               </div>
               <div class="col">
                 <div class="form-floating">
                   <textarea class="form-control" style="min-height:200px" name="senderMsg" id="senderMsg" placeholder="Your message" required minlength="20" maxlength="1000"></textarea>
-                  <label for="senderMsg" class="form-label">Your message::</label>
+                  <label for="senderMsg" class="form-label"><?php esc_html_e('Your message', 'basic-form');?>:</label>
                 </div>
               </div>
             </div>
@@ -43,12 +43,12 @@ get_header();
                 <span class="checkmark"></span>
               </div>
               <div>
-                <label for="consent">I understand that my personal data will be used to contact me regarding the company services. </label>
-                <span>Read how we handle the data in</span> <a href="/privacy-policy/">our privacy policy.</a>
+                <label for="consent"><?php _e('I understand that my personal data will be used to contact me regarding the company services. ', 'basic-form');?></label>
+                <span><?php esc_html_e( 'Read how we handle the data in', 'basic-form' ); ?></span> <a href="/privacy-policy/"><?php esc_html_e( 'our privacy policy.', 'basic-form' ); ?>.</a>
               </div>
             </div>
 
-            <button class="btn btn-primary" type="submit">Send</button>
+            <button class="btn btn-primary" type="submit"><?php esc_html_e( 'Send', 'basic-form' ); ?></button>
           </form>
         </ajax-form>
   <?php endwhile; endif; ?>

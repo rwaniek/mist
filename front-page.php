@@ -12,8 +12,8 @@ get_header(); ?>
 <main class="position-relative overflow-hidden" role="main">
   <section class="jumbo py-5 px-3 px-lg-0">
     <div class="mx-auto" style="max-width: max(992px, 90vw)">
-      <h1 class="mb-2 fw-bold">Short and spicy BDSM stories</h1>
-      <h2>Join our community - enjoy erotic stories created by our users. Read for pleasure on <?php echo get_bloginfo('name')?>.</h2>
+      <h1 class="mb-2 fw-bold"><?php esc_html_e( 'Short and spicy BDSM stories', 'mist' ); ?></h1>
+      <h2><?php esc_html_e( 'Join our community - enjoy erotic stories created by our users. Read for pleasure on ', 'mist' ); ?><?php echo get_bloginfo('name')?>.</h2>
     </div>
   </section>
   <section class="pt-2">

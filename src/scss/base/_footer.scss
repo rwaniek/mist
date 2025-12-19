@@ -1,6 +1,10 @@
 footer {
   background-color: var(--accent-color);
   color: rgb(217, 217, 217);
+
+  nav li {
+    padding-bottom: 0.25rem;
+  }
   
   a {
     font-size: 0.8rem;
