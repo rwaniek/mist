@@ -1,10 +1,7 @@
-<?php 
-$alt_text = get_post(get_post_thumbnail_id())->post_title;
-?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
   <header>  
     <?php if (has_post_thumbnail()) : ?>
-      <?php echo get_the_post_thumbnail($post->ID, 'full', ['class' => 'card-img-top rounded-0', 'alt' => $alt_text]); ?>
+      <?php the_post_thumbnail('full', ['class' => 'card-img-top rounded-0']); ?>
     <?php else : ?>
       <div style="height:200px" class="d-flex align-items-center justify-content-center">
         <svg class="svg-placeholder" width="100" height="100">
@@ -13,6 +10,9 @@ $alt_text = get_post(get_post_thumbnail_id())->post_title;
       </div>
     <?php endif; ?>
     <h1 class="mb-4 pt-4"><?php echo esc_html( get_the_title());?></h1>
+    <?php if (has_excerpt()) : ?>
+      <p class="lead mb-4"><?php echo esc_html(get_the_excerpt()); ?></p>
+    <?php endif; ?>
   </header>
     
   <div class="entry-content">

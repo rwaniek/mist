@@ -42,10 +42,15 @@ h5 {
   //color: #e6e6e6;
 }
 
-.entry-content {
+.entry-content, body:has(.entry-content) .lead {
   font-size: clamp(0.8rem,0.8rem + 0.5vw,1rem);
 }
 
-.entry-content, header h1 {
+.entry-content, header h1, body:has(.entry-content) .lead {
   padding-inline: max(1rem, 3vw);
+}
+
+.lead {
+  font-family: Muli, sans-serif;
+  font-weight: 600;
 }
